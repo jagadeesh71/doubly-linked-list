@@ -83,7 +83,7 @@ class LinkedList {
                 currentNode.prev = newNode;
                 this.length++;
             }
-        } else if (index <= this.length && this.length === 0) {
+        } else if (index ===0 && this.length === 0) {
             //insert the data if linked list is empty
             this.append(data);
         }
@@ -103,8 +103,8 @@ class LinkedList {
     clear() {
         //nullifies the linked list
         this.length = 0;
-        this._head = null;
-        this._tail = null;
+        this._head = new Node();
+        this._tail = new Node();
         return this;
     }
     deleteAt(index) {
@@ -131,7 +131,7 @@ class LinkedList {
                 prevNode.next = currentNode.next;
             }
             this.length--;
-        } else if (index < this.length && this.length === 1) {
+        } else if (index ===0 && this.length === 1) {
             //deletes the data when only one node is present
             this.clear();
         } else {
