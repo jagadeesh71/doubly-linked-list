@@ -103,8 +103,8 @@ class LinkedList {
     clear() {
         //nullifies the linked list
         this.length = 0;
-        this._head = new Node();
-        this._tail = new Node();
+        this._head = null;
+        this._tail = null;
         return this;
     }
     deleteAt(index) {
