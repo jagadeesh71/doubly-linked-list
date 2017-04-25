@@ -25,21 +25,11 @@ class LinkedList {
     }
     head() {
         //returns the head node in the list
-        if (this._head) {
-            return this._head.data;
-        }
-        else {
-            return this._head;
-        }
+        return this._head ? this._head.data : this._head;
     }
     tail() {
         //returns the last node in the list
-        if (this._tail) {
-            return this._tail.data;
-        }
-        else {
-            return this._tail;
-        }
+        return this._tail ? this._tail.data : this._tail;
     }
     at(index) {
         //returns the data at given index if index is in range
@@ -93,12 +83,7 @@ class LinkedList {
     }
     isEmpty() {
         //returns the list is empty or not
-        if (this.length === 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.length === 0;
     }
     clear() {
         //nullifies the linked list
